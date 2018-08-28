@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\DynArray\DynArray\bin\Debug\DynArray.exe.config
+C:\Users\user\source\repos\DynArray\DynArray\bin\Debug\DynArray.exe
+C:\Users\user\source\repos\DynArray\DynArray\bin\Debug\DynArray.pdb
+C:\Users\user\source\repos\DynArray\DynArray\obj\Debug\DynArray.csprojAssemblyReference.cache
+C:\Users\user\source\repos\DynArray\DynArray\obj\Debug\DynArray.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\DynArray\DynArray\obj\Debug\DynArray.exe
+C:\Users\user\source\repos\DynArray\DynArray\obj\Debug\DynArray.pdb
