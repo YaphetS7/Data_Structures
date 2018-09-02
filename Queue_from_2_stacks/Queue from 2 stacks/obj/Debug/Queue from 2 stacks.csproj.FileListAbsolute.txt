@@ -1,0 +1,7 @@
+c:\users\user\source\repos\Queue from 2 stacks\Queue from 2 stacks\bin\Debug\Queue from 2 stacks.exe.config
+c:\users\user\source\repos\Queue from 2 stacks\Queue from 2 stacks\bin\Debug\Queue from 2 stacks.exe
+c:\users\user\source\repos\Queue from 2 stacks\Queue from 2 stacks\bin\Debug\Queue from 2 stacks.pdb
+c:\users\user\source\repos\Queue from 2 stacks\Queue from 2 stacks\obj\Debug\Queue from 2 stacks.csprojAssemblyReference.cache
+c:\users\user\source\repos\Queue from 2 stacks\Queue from 2 stacks\obj\Debug\Queue from 2 stacks.csproj.CoreCompileInputs.cache
+c:\users\user\source\repos\Queue from 2 stacks\Queue from 2 stacks\obj\Debug\Queue from 2 stacks.exe
+c:\users\user\source\repos\Queue from 2 stacks\Queue from 2 stacks\obj\Debug\Queue from 2 stacks.pdb

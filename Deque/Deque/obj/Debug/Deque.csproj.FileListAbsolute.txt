@@ -1,0 +1,7 @@
+c:\Users\user\source\repos\Deque\Deque\bin\Debug\Deque.exe.config
+c:\Users\user\source\repos\Deque\Deque\bin\Debug\Deque.exe
+c:\Users\user\source\repos\Deque\Deque\bin\Debug\Deque.pdb
+c:\Users\user\source\repos\Deque\Deque\obj\Debug\Deque.csprojAssemblyReference.cache
+c:\Users\user\source\repos\Deque\Deque\obj\Debug\Deque.csproj.CoreCompileInputs.cache
+c:\Users\user\source\repos\Deque\Deque\obj\Debug\Deque.exe
+c:\Users\user\source\repos\Deque\Deque\obj\Debug\Deque.pdb
