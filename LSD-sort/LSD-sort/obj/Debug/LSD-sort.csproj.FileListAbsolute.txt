@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\LSD-sort\LSD-sort\bin\Debug\LSD-sort.exe.config
+C:\Users\user\source\repos\LSD-sort\LSD-sort\bin\Debug\LSD-sort.exe
+C:\Users\user\source\repos\LSD-sort\LSD-sort\bin\Debug\LSD-sort.pdb
+C:\Users\user\source\repos\LSD-sort\LSD-sort\obj\Debug\LSD-sort.csprojAssemblyReference.cache
+C:\Users\user\source\repos\LSD-sort\LSD-sort\obj\Debug\LSD-sort.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\LSD-sort\LSD-sort\obj\Debug\LSD-sort.exe
+C:\Users\user\source\repos\LSD-sort\LSD-sort\obj\Debug\LSD-sort.pdb

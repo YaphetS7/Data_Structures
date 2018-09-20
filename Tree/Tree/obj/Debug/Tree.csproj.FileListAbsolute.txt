@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\Tree\Tree\bin\Debug\Tree.exe.config
+C:\Users\user\source\repos\Tree\Tree\bin\Debug\Tree.exe
+C:\Users\user\source\repos\Tree\Tree\bin\Debug\Tree.pdb
+C:\Users\user\source\repos\Tree\Tree\obj\Debug\Tree.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Tree\Tree\obj\Debug\Tree.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Tree\Tree\obj\Debug\Tree.exe
+C:\Users\user\source\repos\Tree\Tree\obj\Debug\Tree.pdb
