@@ -1,0 +1,6 @@
+C:\Users\user\Documents\Visual Studio 2017\Projects\PowerSet1\PowerSet1\bin\Debug\PowerSet1.exe.config
+C:\Users\user\Documents\Visual Studio 2017\Projects\PowerSet1\PowerSet1\bin\Debug\PowerSet1.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\PowerSet1\PowerSet1\bin\Debug\PowerSet1.pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\PowerSet1\PowerSet1\obj\Debug\PowerSet1.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\PowerSet1\PowerSet1\obj\Debug\PowerSet1.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\PowerSet1\PowerSet1\obj\Debug\PowerSet1.pdb
