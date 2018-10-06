@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\PowerSet\PowerSet\bin\Debug\PowerSet.exe.config
+C:\Users\user\source\repos\PowerSet\PowerSet\bin\Debug\PowerSet.exe
+C:\Users\user\source\repos\PowerSet\PowerSet\bin\Debug\PowerSet.pdb
+C:\Users\user\source\repos\PowerSet\PowerSet\obj\Debug\PowerSet.csprojAssemblyReference.cache
+C:\Users\user\source\repos\PowerSet\PowerSet\obj\Debug\PowerSet.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\PowerSet\PowerSet\obj\Debug\PowerSet.exe
+C:\Users\user\source\repos\PowerSet\PowerSet\obj\Debug\PowerSet.pdb
