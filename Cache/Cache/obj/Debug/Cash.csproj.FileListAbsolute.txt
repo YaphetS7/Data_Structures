@@ -1,0 +1,7 @@
+C:\Users\user\Documents\Visual Studio 2017\Projects\Cash\Cash\bin\Debug\Cash.exe.config
+C:\Users\user\Documents\Visual Studio 2017\Projects\Cash\Cash\bin\Debug\Cash.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\Cash\Cash\bin\Debug\Cash.pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\Cash\Cash\obj\Debug\Cash.csprojAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\Cash\Cash\obj\Debug\Cash.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\Cash\Cash\obj\Debug\Cash.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\Cash\Cash\obj\Debug\Cash.pdb

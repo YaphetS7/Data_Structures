@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cash", "Cash\Cash.csproj", "{A4FCEF22-476A-49F4-BED1-C8573522E2AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForCache", "TestForCache\TestForCache.csproj", "{C548081E-1CFF-4C83-9024-B4B3F18DC95A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4FCEF22-476A-49F4-BED1-C8573522E2AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4FCEF22-476A-49F4-BED1-C8573522E2AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4FCEF22-476A-49F4-BED1-C8573522E2AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4FCEF22-476A-49F4-BED1-C8573522E2AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C548081E-1CFF-4C83-9024-B4B3F18DC95A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C548081E-1CFF-4C83-9024-B4B3F18DC95A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C548081E-1CFF-4C83-9024-B4B3F18DC95A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C548081E-1CFF-4C83-9024-B4B3F18DC95A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F6A710A-374F-4809-B246-A79018E9146A}
+	EndGlobalSection
+EndGlobal
