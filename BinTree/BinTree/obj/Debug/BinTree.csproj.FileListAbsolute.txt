@@ -1,0 +1,7 @@
+C:\Users\user\Documents\Visual Studio 2017\Projects\BinTree\BinTree\bin\Debug\BinTree.exe.config
+C:\Users\user\Documents\Visual Studio 2017\Projects\BinTree\BinTree\bin\Debug\BinTree.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\BinTree\BinTree\bin\Debug\BinTree.pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\BinTree\BinTree\obj\Debug\BinTree.csprojAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\BinTree\BinTree\obj\Debug\BinTree.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\BinTree\BinTree\obj\Debug\BinTree.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\BinTree\BinTree\obj\Debug\BinTree.pdb
