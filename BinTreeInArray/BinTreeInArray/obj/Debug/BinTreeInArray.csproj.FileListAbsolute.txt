@@ -1,0 +1,7 @@
+C:\Users\user\Documents\Visual Studio 2017\Projects\BinTreeInArray\BinTreeInArray\bin\Debug\BinTreeInArray.exe.config
+C:\Users\user\Documents\Visual Studio 2017\Projects\BinTreeInArray\BinTreeInArray\bin\Debug\BinTreeInArray.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\BinTreeInArray\BinTreeInArray\bin\Debug\BinTreeInArray.pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\BinTreeInArray\BinTreeInArray\obj\Debug\BinTreeInArray.csprojAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\BinTreeInArray\BinTreeInArray\obj\Debug\BinTreeInArray.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\BinTreeInArray\BinTreeInArray\obj\Debug\BinTreeInArray.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\BinTreeInArray\BinTreeInArray\obj\Debug\BinTreeInArray.pdb

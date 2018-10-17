@@ -1,0 +1,7 @@
+C:\Users\user\Documents\Visual Studio 2017\Projects\ML(recognition letter A)\ML(recognition letter A)\bin\Debug\ML(recognition letter A).exe.config
+C:\Users\user\Documents\Visual Studio 2017\Projects\ML(recognition letter A)\ML(recognition letter A)\bin\Debug\ML(recognition letter A).exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\ML(recognition letter A)\ML(recognition letter A)\bin\Debug\ML(recognition letter A).pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\ML(recognition letter A)\ML(recognition letter A)\obj\Debug\ML(recognition letter A).csprojAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\ML(recognition letter A)\ML(recognition letter A)\obj\Debug\ML(recognition letter A).csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\ML(recognition letter A)\ML(recognition letter A)\obj\Debug\ML(recognition letter A).exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\ML(recognition letter A)\ML(recognition letter A)\obj\Debug\ML(recognition letter A).pdb
