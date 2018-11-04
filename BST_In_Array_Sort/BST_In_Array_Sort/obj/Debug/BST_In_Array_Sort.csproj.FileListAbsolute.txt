@@ -1,0 +1,7 @@
+C:\Users\user\Documents\Visual Studio 2017\Projects\BST_In_Array_Sort\BST_In_Array_Sort\bin\Debug\BST_In_Array_Sort.exe.config
+C:\Users\user\Documents\Visual Studio 2017\Projects\BST_In_Array_Sort\BST_In_Array_Sort\bin\Debug\BST_In_Array_Sort.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\BST_In_Array_Sort\BST_In_Array_Sort\bin\Debug\BST_In_Array_Sort.pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\BST_In_Array_Sort\BST_In_Array_Sort\obj\Debug\BST_In_Array_Sort.csprojAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\BST_In_Array_Sort\BST_In_Array_Sort\obj\Debug\BST_In_Array_Sort.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\BST_In_Array_Sort\BST_In_Array_Sort\obj\Debug\BST_In_Array_Sort.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\BST_In_Array_Sort\BST_In_Array_Sort\obj\Debug\BST_In_Array_Sort.pdb

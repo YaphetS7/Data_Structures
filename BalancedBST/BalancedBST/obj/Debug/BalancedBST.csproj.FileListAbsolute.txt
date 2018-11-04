@@ -1,0 +1,7 @@
+C:\Users\user\Documents\Visual Studio 2017\Projects\BalancedBST\BalancedBST\bin\Debug\BalancedBST.exe.config
+C:\Users\user\Documents\Visual Studio 2017\Projects\BalancedBST\BalancedBST\bin\Debug\BalancedBST.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\BalancedBST\BalancedBST\bin\Debug\BalancedBST.pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\BalancedBST\BalancedBST\obj\Debug\BalancedBST.csprojAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\BalancedBST\BalancedBST\obj\Debug\BalancedBST.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\BalancedBST\BalancedBST\obj\Debug\BalancedBST.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\BalancedBST\BalancedBST\obj\Debug\BalancedBST.pdb
