@@ -62,5 +62,45 @@ namespace TestForGraph
             mygraph.DelVertex(b);
             Assert.AreEqual(mygraph.IsWay(a, b), false);
         }
+        [TestMethod]
+        public void TestMethodForFindWay1()
+        {
+            Graph mygraph = new Graph(5);
+            Vertex a = new Vertex();
+            Vertex b = new Vertex();
+            Vertex c = new Vertex();
+            mygraph.AddVertex(a);
+            mygraph.AddVertex(b);
+            mygraph.AddVertex(c);
+            Vertex d = new Vertex();
+            Vertex f = new Vertex();
+            mygraph.AddVertex(d);
+            mygraph.AddVertex(f);
+            mygraph.AddWay(a, b);
+            mygraph.AddWay(b, c);
+            mygraph.AddWay(c, d);
+            mygraph.AddWay(d, f);
+            Assert.AreEqual(mygraph.IsWayBetween(a, f), true);
+        }
+        [TestMethod]
+        public void TestMethodForFindWay2()
+        {
+            Graph mygraph = new Graph(5);
+            Vertex a = new Vertex();
+            Vertex b = new Vertex();
+            Vertex c = new Vertex();
+            mygraph.AddVertex(a);
+            mygraph.AddVertex(b);
+            mygraph.AddVertex(c);
+            Vertex d = new Vertex();
+            Vertex f = new Vertex();
+            mygraph.AddVertex(d);
+            mygraph.AddVertex(f);
+            mygraph.AddWay(a, b);
+            mygraph.AddWay(b, c);
+            mygraph.AddWay(c, d);
+            //mygraph.AddWay(d, f);
+            Assert.AreEqual(mygraph.IsWayBetween(a, f), false);
+        }
     }
 }

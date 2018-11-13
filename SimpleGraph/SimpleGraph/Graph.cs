@@ -109,7 +109,7 @@ namespace SimpleGraph
                     if (m_adjacency[i, j] == 1 && !vertex[j].hit)
                     {
                         stack.Push(vertex[j]);
-                        vertex[i].hit = true;
+                        vertex[j].hit = true;
                         check = true;
                         break;
                     }
