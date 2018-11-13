@@ -8,7 +8,7 @@ namespace SimpleGraph
 {
     public class Vertex
     {
-
+        public bool hit;
     }
     public class Graph
     {
@@ -93,6 +93,38 @@ namespace SimpleGraph
             }
             cntOfVertex--;
         }
+        public bool IsWayBetween(Vertex first, Vertex second)
+        {
+            int i, j;
+            bool check = false;
+            Stack<Vertex> stack = new Stack<Vertex>();
+            stack.Push(first);
+            first.hit = true;
+            while(stack.Count > 0 && !stack.Contains(second))
+            {
+                check = false;
+                i = vertex.IndexOf(stack.Peek());
+                for (j = 0; j < vertex.Count; j++)
+                {
+                    if (m_adjacency[i, j] == 1 && !vertex[j].hit)
+                    {
+                        stack.Push(vertex[j]);
+                        vertex[i].hit = true;
+                        check = true;
+                        break;
+                    }
+                }
+                if (!check)
+                    stack.Pop();
+            }
+            HitOff();
+            return (!(stack.Count == 0));
+        }
+        private void HitOff()
+        {
+            foreach (Vertex a in vertex)
+                a.hit = false;
+        }
         public void PrintGraph()
         {
             for (int i = 0; i < cntOfVertex; i++)
@@ -117,9 +149,16 @@ namespace SimpleGraph
             mygraph.AddVertex(a);
             mygraph.AddVertex(b);
             mygraph.AddVertex(c);
+            Vertex d = new Vertex();
+            Vertex f = new Vertex();
+            mygraph.AddVertex(d);
+            mygraph.AddVertex(f);
             mygraph.AddWay(a, b);
-            mygraph.DelVertex(b);
-            Console.WriteLine(mygraph.vertex.IndexOf(c));
+            mygraph.AddWay(b, c);
+            mygraph.AddWay(c, d);
+            mygraph.AddWay(d, f);
+            if (mygraph.IsWayBetween(a, f))
+                Console.WriteLine("есть дорога");
         }
     }
 }
