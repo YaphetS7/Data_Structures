@@ -93,7 +93,7 @@ namespace SimpleGraph
             }
             cntOfVertex--;
         }
-        public bool IsWayBetween(Vertex first, Vertex second)
+        public Stack<Vertex> IsWayBetween(Vertex first, Vertex second)
         {
             int i, j;
             bool check = false;
@@ -118,7 +118,7 @@ namespace SimpleGraph
                     stack.Pop();
             }
             HitOff();
-            return (!(stack.Count == 0));
+            return stack;
         }
         private void HitOff()
         {
@@ -157,7 +157,7 @@ namespace SimpleGraph
             mygraph.AddWay(b, c);
             mygraph.AddWay(c, d);
             mygraph.AddWay(d, f);
-            if (mygraph.IsWayBetween(a, f))
+            if (mygraph.IsWayBetween(a, f).Count != 0)
                 Console.WriteLine("есть дорога");
         }
     }

@@ -80,7 +80,7 @@ namespace TestForGraph
             mygraph.AddWay(b, c);
             mygraph.AddWay(c, d);
             mygraph.AddWay(d, f);
-            Assert.AreEqual(mygraph.IsWayBetween(a, f), true);
+            Assert.AreEqual((mygraph.IsWayBetween(a, f).Count != 0), true);
         }
         [TestMethod]
         public void TestMethodForFindWay2()
@@ -100,7 +100,7 @@ namespace TestForGraph
             mygraph.AddWay(b, c);
             mygraph.AddWay(c, d);
             //mygraph.AddWay(d, f);
-            Assert.AreEqual(mygraph.IsWayBetween(a, f), false);
+            Assert.AreEqual((mygraph.IsWayBetween(a, f).Count == 0), true);
         }
     }
 }
