@@ -9,6 +9,7 @@ namespace SimpleGraph
     public class Vertex
     {
         public bool hit;
+        public int LengthOfWay;
     }
     public class Graph
     {
@@ -93,7 +94,7 @@ namespace SimpleGraph
             }
             cntOfVertex--;
         }
-        public Stack<Vertex> IsWayBetween(Vertex first, Vertex second)
+        public Stack<Vertex> DF_search(Vertex first, Vertex second)
         {
             int i, j;
             bool check = false;
@@ -120,10 +121,61 @@ namespace SimpleGraph
             HitOff();
             return stack;
         }
+        public Stack<Vertex> BF_search(Vertex first, Vertex second)
+        {
+            int i, j, k = 0;
+            bool check;
+            Queue<Vertex> queue = new Queue<Vertex>();
+            Stack<Vertex> stack = new Stack<Vertex>();
+            queue.Enqueue(first);
+            first.hit = true;
+            first.LengthOfWay = k;
+            while (queue.Count > 0 && !queue.Contains(second))
+            {
+                check = false;
+                k++;
+                i = vertex.IndexOf(queue.Peek());
+                for (j = 0; j < vertex.Count; j++)
+                {
+                    if (m_adjacency[i, j] == 1 && !vertex[j].hit)
+                    {
+                        check = true;
+                        queue.Enqueue(vertex[j]);
+                        vertex[j].LengthOfWay = k;
+                        vertex[j].hit = true;
+                    }
+                }
+                if (!check)
+                    k--;
+                queue.Dequeue();
+            }
+            if (queue.Count > 0)
+            {
+                stack.Push(second);
+                while (!stack.Contains(first))
+                {
+                    i = vertex.IndexOf(stack.Peek());
+                    for (j = 0; j < vertex.Count; j++)
+                    {
+                        //если вершина связана с вершиной из стэка и длина пути от вершины first до данной вершины на единицу меньше, чем вершины из стэка, то добавить эту вершину в стэк
+                        if (m_adjacency[i, j] == 1 && vertex[j].LengthOfWay == stack.Peek().LengthOfWay - 1 )
+                        {
+                            stack.Push(vertex[j]);
+                            break;
+                        }
+                    }
+                }
+            }
+            HitOff();
+            return stack;
+        }
         private void HitOff()
         {
             foreach (Vertex a in vertex)
+            {
                 a.hit = false;
+                a.LengthOfWay = -1;
+            }
         }
         public void PrintGraph()
         {
@@ -142,23 +194,39 @@ namespace SimpleGraph
     {
         static void Main(string[] args)
         {
-            Graph mygraph = new Graph(5);
+            Graph mygraph = new Graph(10);
             Vertex a = new Vertex();
             Vertex b = new Vertex();
             Vertex c = new Vertex();
+            Vertex d = new Vertex();
+            Vertex f = new Vertex();
+            Vertex e = new Vertex();
+            Vertex g = new Vertex();
+            Vertex h = new Vertex();
+            Vertex i = new Vertex();
             mygraph.AddVertex(a);
             mygraph.AddVertex(b);
             mygraph.AddVertex(c);
-            Vertex d = new Vertex();
-            Vertex f = new Vertex();
             mygraph.AddVertex(d);
+            mygraph.AddVertex(e);
             mygraph.AddVertex(f);
+            mygraph.AddVertex(g);
+            mygraph.AddVertex(h);
+            mygraph.AddVertex(i);
             mygraph.AddWay(a, b);
-            mygraph.AddWay(b, c);
-            mygraph.AddWay(c, d);
-            mygraph.AddWay(d, f);
-            if (mygraph.IsWayBetween(a, f).Count != 0)
+            mygraph.AddWay(a, c);
+            mygraph.AddWay(c, g);
+            mygraph.AddWay(g, h);
+            mygraph.AddWay(g, i);
+            mygraph.AddWay(b, d);
+            mygraph.AddWay(b, e);
+            mygraph.AddWay(b, f);
+            mygraph.AddWay(h, i);
+            Stack<Vertex> stack = mygraph.BF_search(f, i);
+            if (stack.Count - 1 == 5)
                 Console.WriteLine("есть дорога");
+             
+
         }
     }
 }

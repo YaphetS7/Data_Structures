@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SimpleGraph;
 namespace TestForGraph
@@ -80,7 +84,7 @@ namespace TestForGraph
             mygraph.AddWay(b, c);
             mygraph.AddWay(c, d);
             mygraph.AddWay(d, f);
-            int Lway = mygraph.IsWayBetween(a, f).Count - 1;
+            int Lway = mygraph.DF_search(a, f).Count - 1;
             Assert.AreEqual((Lway == 4), true);
         }
         [TestMethod]
@@ -101,7 +105,41 @@ namespace TestForGraph
             mygraph.AddWay(b, c);
             mygraph.AddWay(c, d);
             //mygraph.AddWay(d, f);
-            Assert.AreEqual((mygraph.IsWayBetween(a, f).Count == 0), true);
+            Assert.AreEqual((mygraph.DF_search(a, f).Count == 0), true);
+        }
+        [TestMethod]
+        public void TestMethodForDFS()
+        {
+            Graph mygraph = new Graph(10);
+            Vertex a = new Vertex();
+            Vertex b = new Vertex();
+            Vertex c = new Vertex();
+            Vertex d = new Vertex();
+            Vertex f = new Vertex();
+            Vertex e = new Vertex();
+            Vertex g = new Vertex();
+            Vertex h = new Vertex();
+            Vertex i = new Vertex();
+            mygraph.AddVertex(a);
+            mygraph.AddVertex(b);
+            mygraph.AddVertex(c);
+            mygraph.AddVertex(d);
+            mygraph.AddVertex(e);
+            mygraph.AddVertex(f);
+            mygraph.AddVertex(g);
+            mygraph.AddVertex(h);
+            mygraph.AddVertex(i);
+            mygraph.AddWay(a, b);
+            mygraph.AddWay(a, c);
+            mygraph.AddWay(c, g);
+            mygraph.AddWay(g, h);
+            mygraph.AddWay(g, i);
+            mygraph.AddWay(b, d);
+            mygraph.AddWay(b, e);
+            mygraph.AddWay(b, f);
+            mygraph.AddWay(h, i);
+            Stack<Vertex> stack = mygraph.BF_search(f, i);
+            Assert.AreEqual(5, stack.Count - 1);
         }
     }
 }
