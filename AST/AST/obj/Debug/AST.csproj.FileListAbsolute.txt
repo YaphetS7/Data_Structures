@@ -1,0 +1,7 @@
+C:\Users\user\Documents\Visual Studio 2017\Projects\AST\AST\bin\Debug\AST.exe.config
+C:\Users\user\Documents\Visual Studio 2017\Projects\AST\AST\bin\Debug\AST.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\AST\AST\bin\Debug\AST.pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\AST\AST\obj\Debug\AST.csprojAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\AST\AST\obj\Debug\AST.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\AST\AST\obj\Debug\AST.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\AST\AST\obj\Debug\AST.pdb
