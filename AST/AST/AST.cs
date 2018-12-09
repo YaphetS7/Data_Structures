@@ -10,7 +10,9 @@ namespace AST
     {
         public Node left = null, right = null, parent = null;
         public char value;
-
+        public bool IsValue = false;
+        public string translation = "";
+        public int interpretation;
     }
     public class AST
     {
@@ -34,21 +36,68 @@ namespace AST
                 }
                 if (token_list[i].token_value == ')')
                 {
-                    node = node.parent;
+                    if (node.parent != null)
+                        node = node.parent;
                     continue;
                 }
                 if (token_list[i].token_value == '*' || token_list[i].token_value == '/' || token_list[i].token_value == '+' || token_list[i].token_value == '-')
                 {
                     Node temp = new Node();
                     node.value = token_list[i].token_value;
+                    node.IsValue = false;
                     node.right = temp;
                     temp.parent = node;
                     node = node.right;
                     continue;
                 }
                 node.value = token_list[i].token_value;
+                node.IsValue = true;
                 node = node.parent;
             }
+        }
+        public void PrintResult()
+        {
+            Console.WriteLine(root.translation + " = " + root.interpretation);
+        }
+        public void Calc(Node node)
+        {
+            if (node.left.IsValue && node.right.IsValue && !node.IsValue)
+            {
+                string a = node.left.translation;
+                string b = node.right.translation;
+                if (a.Length == 0)
+                    a = node.left.value + "";
+                if (b.Length == 0)
+                    b = node.right.value + "";
+                int first = node.left.interpretation;
+                int second = node.right.interpretation;
+                if (first == 0)
+                    first = Convert.ToInt32(node.left.value + "");
+                if (second == 0)
+                    second = Convert.ToInt32(node.right.value + "");
+                if (node.value == '+')
+                    node.interpretation = first + second;
+                if (node.value == '-')
+                    node.interpretation = first - second;
+                if (node.value == '*')
+                    node.interpretation = first * second;
+                if (node.value == '/')
+                    node.interpretation = first / second;
+                node.translation = "(" + a + node.value + b + ")";
+                node.IsValue = true;
+                if (node == root)
+                    return;
+                else
+                {
+                    Calc(node.parent);
+                }
+
+            }
+            if (node.left != null && !node.left.IsValue)
+                Calc(node.left);
+            if (node.right != null && !node.right.IsValue)
+                Calc(node.right);
+
         }
         public void PrintAST(Node node)
         {
@@ -225,9 +274,11 @@ namespace AST
     {
         static void Main(string[] args)
         {
-             AST tree = new AST("7+3*5-2");
-             tree.PrintAST(tree.root);
-
+            AST tree = new AST("7+3+5+6+9-2+3*7-9*4");
+            tree.Calc(tree.root);
+            tree.PrintResult();
+            
+            
         }
     }
 }
