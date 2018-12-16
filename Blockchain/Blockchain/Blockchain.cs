@@ -44,11 +44,6 @@ namespace Blockchain
             MD5 md5 = new MD5CryptoServiceProvider();
             byte[] check = md5.ComputeHash(Encoding.UTF8.GetBytes(time + index + data + previousHash + nonce));
             result = BitConverter.ToString(check).Replace("-", String.Empty);
-            for (int i = result.Length - 1; i > result.Length - 1 - CountOfZeros; i--)
-            {
-                if (result[i] != '0')
-                    return Hash(time, index, data, previousHash, nonce + "aa");
-            }
             return result;
         }
         private string HashOfBlock(Block block)
@@ -59,7 +54,19 @@ namespace Blockchain
         {
             Block block = new Block(data);
             block.PreviousHash = lastHash;
+            
             block.CurrentHash = Hash(block.time, count, data, lastHash, "q");
+            string str = "qa";
+            string s = "";
+            for (int i = 0; i < CountOfZeros; i++)
+            {
+                s += "0";
+            }
+            while(block.CurrentHash.Substring(block.CurrentHash.Length - CountOfZeros) != s)
+            {
+                block.CurrentHash = Hash(block.time, count, data, lastHash, str);
+                str = str + "aaa";
+            }
             lastHash = block.CurrentHash;
             block.index = count;
             count++;
@@ -95,7 +102,7 @@ namespace Blockchain
     {
         static void Main(string[] args)
         {
-            Blockchain myblocks = new Blockchain("Igor let me 10 bitcoins", 2);
+            Blockchain myblocks = new Blockchain("Igor let me 10 bitcoins", 4);
             myblocks.AddBlock("Igor let u 1000 bitcoins");
             myblocks.AddBlock("I spent all bitcoins");
             myblocks.AddBlock("Oups, I'm late with this task");
