@@ -26,7 +26,8 @@ namespace Blockchain
         private string lastHash;
         private string firstHash;
         public int count;
-        public Blockchain(string data)
+        private int CountOfZeros;
+        public Blockchain(string data, int CountOfZeros)
         {
             Block firstblock = new Block(data);
             firstblock.CurrentHash = "00000";
@@ -35,24 +36,30 @@ namespace Blockchain
             firstblock.index = blocks.IndexOf(firstblock);
             lastHash = firstblock.CurrentHash;
             count = 1;
+            this.CountOfZeros = CountOfZeros;
         }
-        private string Hash(string time, int index, string data, string previousHash)
+        private string Hash(string time, int index, string data, string previousHash, string nonce)
         {
             string result;
             MD5 md5 = new MD5CryptoServiceProvider();
-            byte[] check = md5.ComputeHash(Encoding.UTF8.GetBytes(time + index + data + previousHash));
+            byte[] check = md5.ComputeHash(Encoding.UTF8.GetBytes(time + index + data + previousHash + nonce));
             result = BitConverter.ToString(check).Replace("-", String.Empty);
+            for (int i = result.Length - 1; i > result.Length - 1 - CountOfZeros; i--)
+            {
+                if (result[i] != '0')
+                    return Hash(time, index, data, previousHash, nonce + "aa");
+            }
             return result;
         }
         private string HashOfBlock(Block block)
         {
-            return Hash(block.time, block.index, block.data, block.PreviousHash);
+            return Hash(block.time, block.index, block.data, block.PreviousHash, "q");
         }
         public void AddBlock(string data)
         {
             Block block = new Block(data);
             block.PreviousHash = lastHash;
-            block.CurrentHash = Hash(block.time, count, data, lastHash);
+            block.CurrentHash = Hash(block.time, count, data, lastHash, "q");
             lastHash = block.CurrentHash;
             block.index = count;
             count++;
@@ -88,11 +95,11 @@ namespace Blockchain
     {
         static void Main(string[] args)
         {
-            Blockchain myblocks = new Blockchain("Igor let me 10 bitcoins");
+            Blockchain myblocks = new Blockchain("Igor let me 10 bitcoins", 2);
             myblocks.AddBlock("Igor let u 1000 bitcoins");
             myblocks.AddBlock("I spent all bitcoins");
             myblocks.AddBlock("Oups, I'm late with this task");
-           // myblocks.GetAllHashes();
+            myblocks.GetAllHashes();
            
         }
     }
