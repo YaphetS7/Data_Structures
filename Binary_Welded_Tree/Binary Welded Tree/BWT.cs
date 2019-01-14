@@ -10,6 +10,7 @@ namespace Binary_Welded_Tree
     {
         public Node left, right, parent;
         public bool isList = false;
+        public int CntColor = 0;
         public int colorParent = 0, colorLeft = 0, colorRight = 0;
         public Node()
         {
@@ -21,21 +22,22 @@ namespace Binary_Welded_Tree
             colorRight = -1;
         }
     }
-    
+
     public class BinaryWeldedTree
     {
         Random rand = new Random();
         public int depth;
         public Node root1, root2;
-        public Node[] first;
-        public Node[] second;
-        public int cntOfNodes = 1;
-        public int cntOfColors;
+        public Node[] first; // first array of Nodes (it contains tree)
+        public Node[] second; // second...
+        public int cntOfNodes = 1; 
+        public int cntOfColors; 
         public BinaryWeldedTree(int depth, int cntOfColors)
         {
             this.cntOfColors = cntOfColors;
             this.depth = depth;
             int temp = 2;
+            // CntOfNodes = Pow(2, depth + 1) - 1;
             for (int i = 1; i <= depth; i++)
             {
                 cntOfNodes += temp;
@@ -52,6 +54,67 @@ namespace Binary_Welded_Tree
             root2 = second[0];
             DoTree();
         }
+
+        //we just do: node = node.parent...(repeat while node.parent != root) and calc CntOfColor
+        public List<Node> FindLenOfWay(int color)
+        {
+            int i;
+            List<Node> list = new List<Node>();
+            Node num1 = null, num2 = null;
+            int index = cntOfNodes - (cntOfNodes + 1) / 2; //that is index of first list(in our arrays)
+            for (i = index; i <= cntOfNodes - 1; i++)
+            {
+                CalcColors(i, color, true);
+                CalcColors(i, color, false);
+            }
+            int min = first[index].CntColor + first[index].left.CntColor;
+            for (i = index; i <= cntOfNodes - 1; i++)
+            {
+                if (first[i].CntColor + first[i].left.CntColor < min)
+                {
+                    min = first[i].CntColor + first[i].left.CntColor;
+                    num1 = first[i];
+                    num2 = first[i].left;
+                }
+
+                if (first[i].CntColor + first[i].right.CntColor < min)
+                {
+                    min = first[i].CntColor + first[i].right.CntColor;
+                    num1 = first[i];
+                    num2 = first[i].right;
+                }
+            }
+            list.Add(num1);
+            list.Add(num2);
+            return list;
+        }
+        private void CalcColors(int index, int color, bool isFirst)
+        {
+            int starti = index;
+            int cnt = 0;
+            int i = index;
+            while (i >= 0)
+            {
+                if (isFirst)
+                {
+                    if (first[i].colorParent == color)
+                        cnt++;
+                }
+                else
+                {
+                    if (second[i].colorParent == color)
+                        cnt++;
+                }
+                if (i % 2 == 0)
+                    i = (i - 2) / 2;
+                else
+                    i = (i - 1) / 2;
+            }
+            if (isFirst)
+                first[starti].CntColor = cnt;
+            else
+                second[starti].CntColor = cnt;
+        }
         private void AddColors(Node node)
         {
             int a = node.colorParent;
@@ -62,7 +125,7 @@ namespace Binary_Welded_Tree
                 if (node.left == null)
                     return;
                 //Color of parent of lists second(bottom) tree
-                int temp1 = node.left.colorParent; 
+                int temp1 = node.left.colorParent;
                 int temp2 = node.right.colorParent;
                 //TRY TO UNDERSTAND IT BY YOURSELF
                 while (a == b || b == c || a == c || b == 0 || c == 0 || b == -1 || c == -1 || temp1 == b || temp2 == c)
@@ -75,7 +138,7 @@ namespace Binary_Welded_Tree
                 return;
             }
             //randomize colors
-            while (a == b || b == c || a == c || b == 0 || c == 0 || b == -1 || c == - 1)
+            while (a == b || b == c || a == c || b == 0 || c == 0 || b == -1 || c == -1)
             {
                 b = rand.Next(1, cntOfColors + 1);
                 c = rand.Next(1, cntOfColors + 1);
@@ -105,12 +168,12 @@ namespace Binary_Welded_Tree
                 AddColors(second[i]);
             }
 
-            for (i = 1; i <  cntOfNodes; i++)
+            for (i = 1; i < cntOfNodes; i++)
                 AddColors(first[i]);
         }
         public void PRINT()
         {
-            for(int i = 0; i < cntOfNodes; i++)
+            for (int i = 0; i < cntOfNodes; i++)
             {
                 Console.Write(i + " узел: parent - " + first[i].colorParent + ", left child - " + first[i].colorLeft + ", right child - " + first[i].colorRight);
                 Console.WriteLine();
@@ -138,7 +201,7 @@ namespace Binary_Welded_Tree
                         index -= 1;
                         index /= 2;
                     }
-                    if (index >=0)
+                    if (index >= 0)
                     {
                         temp1.parent = first[index];
                         temp2.parent = second[index];
@@ -153,7 +216,7 @@ namespace Binary_Welded_Tree
                 }
             }
             index = 1;
-           
+
             for (i = 0; i < depth; i++) //calc the index of first list
             {
                 index *= 2;
@@ -180,6 +243,8 @@ namespace Binary_Welded_Tree
             BinaryWeldedTree tree = new BinaryWeldedTree(3, 4);
             tree.SetColors();
             tree.PRINT();
+            List<Node> list = tree.FindLenOfWay(1);
+            Console.WriteLine(list[0].CntColor + " " + list[1].CntColor); //print the cntOfColor of two lists
         }
     }
 }

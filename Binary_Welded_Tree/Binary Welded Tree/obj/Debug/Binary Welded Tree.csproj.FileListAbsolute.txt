@@ -1,7 +1,7 @@
-C:\Users\user\Documents\Visual Studio 2017\Projects\Binary Welded Tree\Binary Welded Tree\bin\Debug\Binary Welded Tree.exe.config
-C:\Users\user\Documents\Visual Studio 2017\Projects\Binary Welded Tree\Binary Welded Tree\bin\Debug\Binary Welded Tree.exe
-C:\Users\user\Documents\Visual Studio 2017\Projects\Binary Welded Tree\Binary Welded Tree\bin\Debug\Binary Welded Tree.pdb
-C:\Users\user\Documents\Visual Studio 2017\Projects\Binary Welded Tree\Binary Welded Tree\obj\Debug\Binary Welded Tree.csprojAssemblyReference.cache
-C:\Users\user\Documents\Visual Studio 2017\Projects\Binary Welded Tree\Binary Welded Tree\obj\Debug\Binary Welded Tree.csproj.CoreCompileInputs.cache
-C:\Users\user\Documents\Visual Studio 2017\Projects\Binary Welded Tree\Binary Welded Tree\obj\Debug\Binary Welded Tree.exe
-C:\Users\user\Documents\Visual Studio 2017\Projects\Binary Welded Tree\Binary Welded Tree\obj\Debug\Binary Welded Tree.pdb
+C:\Users\Даниил\source\repos\Binary Welded Tree\Binary Welded Tree\bin\Debug\Binary Welded Tree.exe.config
+C:\Users\Даниил\source\repos\Binary Welded Tree\Binary Welded Tree\bin\Debug\Binary Welded Tree.exe
+C:\Users\Даниил\source\repos\Binary Welded Tree\Binary Welded Tree\bin\Debug\Binary Welded Tree.pdb
+C:\Users\Даниил\source\repos\Binary Welded Tree\Binary Welded Tree\obj\Debug\Binary Welded Tree.csprojAssemblyReference.cache
+C:\Users\Даниил\source\repos\Binary Welded Tree\Binary Welded Tree\obj\Debug\Binary Welded Tree.csproj.CoreCompileInputs.cache
+C:\Users\Даниил\source\repos\Binary Welded Tree\Binary Welded Tree\obj\Debug\Binary Welded Tree.exe
+C:\Users\Даниил\source\repos\Binary Welded Tree\Binary Welded Tree\obj\Debug\Binary Welded Tree.pdb
