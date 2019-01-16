@@ -54,7 +54,76 @@ namespace Binary_Welded_Tree
             root2 = second[0];
             DoTree();
         }
+        public int RandomWandering()
+        {
+            Node node = root1;
+            int cntOfSteps = 0, x;
+            while (node != root2)
+            {
+                if (node == root1)
+                    x = rand.Next(1, 3);
+                else
+                    x = rand.Next(1, 4);
+                
+                if (x == 3 && node.parent != null)
+                    node = node.parent;
 
+                if (x == 2 && node.right != null)
+                    node = node.right;
+                
+                if (x == 1 && node.left != null)
+                    node = node.left;
+                
+                cntOfSteps++;
+            }
+            return cntOfSteps;
+        }
+        public int RandomMultiWandering()
+        {
+            int cntOfPoints = 1, cntOfSteps = 0;
+            List<Node> list = new List<Node>();
+            list.Add(root1);
+            Node currNode = root1, newnode = null;
+            while (currNode != root2)
+            {
+                for (int i = 0; i < cntOfPoints; i++)
+                {
+                    newnode = RandomStep(list[i]);
+                    list[i] = newnode;
+                    if (cntOfPoints < 16)
+                        list.Add(newnode);
+                    if (newnode == root2)
+                        break;
+                }
+                cntOfSteps++;
+                if (cntOfPoints < 16)
+                {
+                    cntOfPoints *= 2;
+                }
+                if (newnode == root2)
+                    break;
+                cntOfSteps++;
+            }
+            return cntOfSteps;
+        }
+        private Node RandomStep(Node node)
+        {
+            int temp;
+            if (node == root1)
+                temp = rand.Next(1, 3);
+            else
+                temp = rand.Next(1, 4);
+
+            if (temp == 3 && node.parent != null)
+                node = node.parent;
+
+            if (temp == 2 && node.right != null)
+                node = node.right;
+
+            if (temp == 1 && node.left != null)
+                node = node.left;
+            return node;
+        }
         //we just do: node = node.parent...(repeat while node.parent != root) and calc CntOfColor
         public List<Node> FindLenOfWay(int color)
         {
@@ -181,41 +250,28 @@ namespace Binary_Welded_Tree
         }
         private void DoTree()
         {
-            int index;
-            int i;
-            Node temp1, temp2;
-            for (i = 0; i < cntOfNodes; i++) //build two trees
+            int i, index = 1;
+            for (i = 0; i < cntOfNodes; i++)
             {
-                temp1 = first[i];
-                temp2 = second[i];
-                index = i;
-                if (i * 2 + 1 < cntOfNodes)
+                int index1, index2;
+                index1 = i * 2 + 1; //left child
+                index2 = i * 2 + 2; //right child
+                if (index1 < cntOfNodes)
                 {
-                    if (index % 2 == 0)
-                    {
-                        index -= 2;
-                        index /= 2;
-                    }
-                    else
-                    {
-                        index -= 1;
-                        index /= 2;
-                    }
-                    if (index >= 0)
-                    {
-                        temp1.parent = first[index];
-                        temp2.parent = second[index];
-                    }
-                    temp1.left = first[i * 2 + 1];
-                    temp2.left = second[i * 2 + 1];
+                    first[index1].parent = first[i];
+                    second[index1].parent = second[i];
+                    first[i].left = first[index1];
+                    second[i].left = second[index1];
                 }
-                if (i * 2 + 2 < cntOfNodes)
+                if (index2 < cntOfNodes)
                 {
-                    temp1.right = first[i * 2 + 2];
-                    temp2.right = second[i * 2 + 2];
+                    first[index2].parent = first[i];
+                    second[index2].parent = second[i];
+                    first[i].left = first[index2];
+                    second[i].left = second[index2];
                 }
+
             }
-            index = 1;
 
             for (i = 0; i < depth; i++) //calc the index of first list
             {
@@ -244,7 +300,19 @@ namespace Binary_Welded_Tree
             tree.SetColors();
             tree.PRINT();
             List<Node> list = tree.FindLenOfWay(1);
-            Console.WriteLine(list[0].CntColor + " " + list[1].CntColor); //print the cntOfColor of two lists
+            //Console.WriteLine(list[0].CntColor + " " + list[1].CntColor); //print the cntOfColor of two lists
+            int avg1 = 0, avg2 = 0;
+            for (int i = 0; i < 1000000; i++)
+            {
+                int res1 = tree.RandomWandering();
+                int res2 = tree.RandomMultiWandering();
+                avg1 += res1;
+                avg2 += res2;
+            }
+            avg1 /= 1000000;
+            avg2 /= 1000000;
+            Console.WriteLine(avg1); //print the average count of steps by using the algorihtm(with 1 point) 1 000 000 times
+            Console.WriteLine(avg2); //print the average count of steps by using the second algorithm(with multiply points) 1 000 000 times
         }
     }
 }
