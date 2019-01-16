@@ -54,6 +54,7 @@ namespace Binary_Welded_Tree
             root2 = second[0];
             DoTree();
         }
+        
         public int RandomWandering()
         {
             Node node = root1;
@@ -102,7 +103,7 @@ namespace Binary_Welded_Tree
                 }
                 if (newnode == root2)
                     break;
-                cntOfSteps++;
+                
             }
             return cntOfSteps;
         }
@@ -302,15 +303,15 @@ namespace Binary_Welded_Tree
             List<Node> list = tree.FindLenOfWay(1);
             //Console.WriteLine(list[0].CntColor + " " + list[1].CntColor); //print the cntOfColor of two lists
             int avg1 = 0, avg2 = 0;
-            for (int i = 0; i < 1000000; i++)
+            for (int i = 0; i < 100000; i++)
             {
                 int res1 = tree.RandomWandering();
                 int res2 = tree.RandomMultiWandering();
                 avg1 += res1;
                 avg2 += res2;
             }
-            avg1 /= 1000000;
-            avg2 /= 1000000;
+            avg1 /= 100000;
+            avg2 /= 100000;
             Console.WriteLine(avg1); //print the average count of steps by using the algorihtm(with 1 point) 1 000 000 times
             Console.WriteLine(avg2); //print the average count of steps by using the second algorithm(with multiply points) 1 000 000 times
         }
