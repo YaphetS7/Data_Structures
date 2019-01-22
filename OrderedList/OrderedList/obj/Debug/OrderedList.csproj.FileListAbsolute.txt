@@ -1,7 +1,7 @@
-C:\Users\user\source\repos\OrderedList\OrderedList\bin\Debug\OrderedList.exe.config
-C:\Users\user\source\repos\OrderedList\OrderedList\bin\Debug\OrderedList.exe
-C:\Users\user\source\repos\OrderedList\OrderedList\bin\Debug\OrderedList.pdb
-C:\Users\user\source\repos\OrderedList\OrderedList\obj\Debug\OrderedList.csprojAssemblyReference.cache
-C:\Users\user\source\repos\OrderedList\OrderedList\obj\Debug\OrderedList.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\OrderedList\OrderedList\obj\Debug\OrderedList.exe
-C:\Users\user\source\repos\OrderedList\OrderedList\obj\Debug\OrderedList.pdb
+C:\Users\Даниил\source\repos\OrderedList\OrderedList\bin\Debug\OrderedList.exe.config
+C:\Users\Даниил\source\repos\OrderedList\OrderedList\bin\Debug\OrderedList.exe
+C:\Users\Даниил\source\repos\OrderedList\OrderedList\bin\Debug\OrderedList.pdb
+C:\Users\Даниил\source\repos\OrderedList\OrderedList\obj\Debug\OrderedList.csprojAssemblyReference.cache
+C:\Users\Даниил\source\repos\OrderedList\OrderedList\obj\Debug\OrderedList.csproj.CoreCompileInputs.cache
+C:\Users\Даниил\source\repos\OrderedList\OrderedList\obj\Debug\OrderedList.exe
+C:\Users\Даниил\source\repos\OrderedList\OrderedList\obj\Debug\OrderedList.pdb

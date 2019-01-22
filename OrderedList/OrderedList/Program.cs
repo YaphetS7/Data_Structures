@@ -1,280 +1,229 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace OrderedList
+namespace AlgorithmsDataStructures
 {
-    public class Node
+    public class Node<T>
     {
-        public int value;
-        public Node next, prev;
-        public Node(int x)
+        public T value;
+        public Node<T> next, prev;
+        public Node(T _value)
         {
-            value = x;
+            value = _value;
             next = null;
+            prev = null;
         }
-
-
     }
-    public class OrderedList
+
+    public class OrderedList<T>
     {
-        public Node head;
-        public Node tail;
-        public bool g;
-        public OrderedList(bool check)
+        public Node<T> head, tail;
+        private bool _ascending;
+        private int count;
+        public OrderedList(bool asc)
         {
-            g = check;
+            count = 0;
             head = null;
             tail = null;
+            _ascending = asc;
         }
-        public void PrintList() // out
+
+        public int Compare(T v1, T v2)
         {
-            Console.WriteLine();
-            Node node;
-            node = head;
-            while (node != null)
+            if (typeof(T) == typeof(String))
             {
-                Console.Write(node.value + "\t");
-                node = node.next;
-            }
-        }
-        private void AddFirst(int item)
-        {
-            Node node, temp, add;
-            add = new Node(item);
-            temp = null;
-            node = add;
-            node.next = head;
-            node = node.next;
-            node.prev = add;
-            while (node != null)
-            {
-                temp = node;
-                node = node.next;
-                if (node != null)
-                    node.prev = temp;
-            }
-            head = add;
-            tail = temp;
-        }
-        private void AddLast(int add) // add node to end of list
-        {
-            Node item = new Node(add);
-            if (head == null)
-            {
-                head = item;
-                item.prev = null;
-                item.next = null;
+                string s1 = Convert.ToString(v1);
+                string s2 = Convert.ToString(v2);
+                int i1 = 0, i2 = 0, j1 = s1.Length, j2 = s2.Length;
+                while(s1[i1] == ' ')
+                {
+                    i1++;
+                }
+                while (s1[j1 - 1] == ' ')
+                {
+                    j1--;
+                }
+                while (s2[i2] == ' ')
+                {
+                    i2++;
+                }
+                while (s2[j2 - 1] == ' ')
+                {
+                    j2--;
+                }
+                return String.Compare(s1.Substring(i1, j1 - i1), s2.Substring(i2, j2 - i2));
             }
             else
             {
-                tail.next = item;
-                item.prev = tail;
-            }
-            tail = item;
-        }
-        public void Add(int add) 
-        {
-            Node node;
-            if (head != null)
-            {
-                node = head;
-                while (check(add, node.value))
-                {
-                    if (node.next != null)
-                        node = node.next;
-                    else
-                        break;
-
-                }
-                if (g)
-                {
-                    if (node == head)
-                    {
-                        if (node.value >= add)
-                            AddFirst(add);
-                        else
-                        {
-                            if (node.next != null)
-                                add_after(node.value, add);
-                            else
-                                AddLast(add);
-                        }
-                    }
-                    else
-                    if (node == tail)
-                    {
-
-                        if (node.value >= add)
-                            add_after(node.prev.value, add);
-                        else
-                            AddLast(add);
-                    }
-                    else
-                    {
-                        if (node.value <= add)
-                            add_after(node.value, add);
-                        else
-                            add_after(node.prev.value,add);
-                    }
-                }
+                double temp1 = Convert.ToDouble(v1);
+                double temp2 = Convert.ToDouble(v2);
+                if (temp1 < temp2)
+                    return -1;
+                if (temp1 > temp2)
+                    return 1;
                 else
-                {
-                    if (node == head)
-                    {
-                        if (node.value <= add)
-                            AddFirst(add);
-                        else
-                            add_after(node.value, add);
-                    }
-                    else
-                    if (node == tail)
-                    {
-                       
-                        if (node.value >= add)
-                            AddLast(add);
-                        else
-                            add_after(node.prev.value, add);
-                    }
-                    else
-                    {
-                        if (node.value <= add)
-                            add_after(node.prev.value, add);
-                        else
-                            add_after(node.next.value,add);
-                    }
-                }
-            }
-            else
-            {
-                node = new Node(add);
-                head = node;
-                node.prev = null;
-                node.next = null;
-                tail = head;
-                tail.next = null;
-                tail.prev = null;
+                    return 0;
             }
         }
-        public void add_after(int x, int item) // add after x(value) item
+
+        public void Add(T value)
         {
-            Node node, newnode, temp;
-            temp = null;
-            node = head;
-            node = find(x);
-            temp = node.next;
-            newnode = new Node(item);
-            node.next = newnode;
-            newnode.next = temp;
-            temp.prev = newnode;
+            int x;
+            if (_ascending)
+                x = 1;
+            else
+                x = -1;
+            Node<T> newnode = new Node<T>(value);
+            if (count == 0)
+            {
+                head = newnode;
+                tail = newnode;
+                count = 1;
+                return;
+            }
+            if (Compare((head.value), value) == 0)
+            {
+                newnode.next = head;
+                head.prev = newnode;
+                head = newnode;
+                count++;
+                return;
+            }
+            if (Compare(tail.value, value) == 0)
+            {
+                newnode.prev = tail;
+                tail.next = newnode;
+                tail = newnode;
+                count++;
+                return;
+            }
+            Node<T> node = head;
+            if (Compare(node.value, value) == x)
+            {
+                head.prev = newnode;
+                newnode.next = head;
+                head = newnode;
+                count++;
+                return;
+            }
+            while (node != null && Compare(node.value, value) == -x && Compare(node.value, value) != 0)
+            {
+                node = node.next;
+            }
+            if (node == null)
+            {
+                tail.next = newnode;
+                newnode.prev = tail;
+                tail = newnode;
+                count++;
+                return;
+            }
+            if (count == 1)
+            {
+                tail = newnode;
+                head.next = tail;
+                tail.prev = head;
+                count++;
+                return;
+            }
+            node = node.prev;
+            newnode.next = node.next;
             newnode.prev = node;
+            node.next = newnode;
+            node = newnode.next;
+            node.prev = newnode;
+            count++;
+
+
 
         }
-        public Node find(int val) // find node with value = val
+
+        public Node<T> Find(T val)
         {
-            Node node;
-            node = head;
-            while (check(val, node.value))
+            Node<T> node = head;
+            string value = Convert.ToString(val);
+            while(node != null)
             {
-                if (node.next != null)
-                    node = node.next;
-                else
+                string temp = Convert.ToString(node.value);
+                if (temp == value)
                     break;
-
+                node = node.next;
             }
-            return node.prev;
+            return node;
         }
-        public bool check(int add, int x)
-        {
-            if (g)
-                return (add >= x);
-            else
-                return (add <= x);
-        }
-        public void Del(int item) // delete only one node, which element equals item
-        {
-            Node node, temp;
-            node = find(item);
 
+        public void Delete(T val)
+        {
+            Node<T> node = Find(val);
+            if (node == null)
+                return;
+            if (count == 1)
+            {
+                head = null;
+                tail = null;
+                count = 0;
+                return;
+            }
+            if (count == 2)
+            {
+                if (node == head)
+                {
+                    head = head.next;
+                    head.prev = null;
+                }
+                else
+                {
+                    tail = tail.prev;
+                    tail.next = null;
+                }
+                count = 1;
+                return;
+            }
             if (node == head)
             {
-                temp = node.next;
-                node = null;
-                head = temp;
+                head = head.next;
                 head.prev = null;
+                count--;
+                return;
             }
-            else
-               if (node == tail)
+            if (node == tail)
             {
-                temp = node.prev;
-                temp.next = null;
-                tail = temp;
+                tail = tail.prev;
+                tail.next = null;
+                count--;
+                return;
             }
-            else
-            {
-                node = node.prev;
-                temp = node.next.next;
-                node.next = temp;
-                temp.prev = node;
-            }
-        }
-    }
-    public class Strs : OrderedList
-    {
-        bool g;
-        LinkedList<string> list = new LinkedList<string>();
-        public Strs(bool x) : base(x)
-        {
-            g = x;
-        }
-        public string del_(string str)
-        {
-            string result = "";
-            char[] q = new char[str.Length + 1];
-            for (int i = 0; i < str.Length; i++)
-                q[i] = str[i];
-            for (int j = 0; j < str.Length; j++)
-                if (q[j] != ' ')
-                   result = result + q[j];
-            return result;
-        }
-        public void Addstr(string s)
-        {
-            del_(s);
+            node.prev.next = node.next;
+            node.next.prev = node.prev;
+            count--;
         }
 
-        
-        
-    }
-    class Program
-    {
-        static void Main(string[] args)
+        public void Clear(bool asc)
         {
-            OrderedList list = new OrderedList(true);
-            list.Add(100);
-            
-            list.Add(1230);
-            
-            list.Add(0);
-            
-            list.Add(23);
-           
-            list.Add(200);
-            
-            list.Add(1000);
-            
-            list.Add(1);
-            
-            list.Add(69);
-         
-            list.Add(1000);
-            
-            list.Add(55);
-            list.PrintList();
-           
+            _ascending = asc;
+            count = 0;
+            head.next = null;
+            head = null;
+            tail.prev = null;
+            tail = null;
+        }
+
+        public int Count()
+        {
+            return count;
+        }
+
+        public List<Node<T>> GetAll() 
+        {
+            List<Node<T>> r = new List<Node<T>>();
+            Node<T> node = head;
+            while (node != null)
+            {
+                r.Add(node);
+                node = node.next;
+            }
+            return r;
         }
     }
+
 }
-
