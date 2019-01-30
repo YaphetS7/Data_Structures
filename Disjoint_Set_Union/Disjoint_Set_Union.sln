@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Disjoint_Set_Union", "Disjoint_Set_Union\Disjoint_Set_Union.csproj", "{F678C8E0-FA85-4C3C-BC11-3AC135F10F61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F678C8E0-FA85-4C3C-BC11-3AC135F10F61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F678C8E0-FA85-4C3C-BC11-3AC135F10F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F678C8E0-FA85-4C3C-BC11-3AC135F10F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F678C8E0-FA85-4C3C-BC11-3AC135F10F61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7E9AA49-AD7B-4474-9046-83B1A18E7B3B}
+	EndGlobalSection
+EndGlobal
