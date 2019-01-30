@@ -56,30 +56,22 @@ namespace Disjoint_Set_Union
             if (node1 == node2)
                 return;
             int x = new Random().Next(1, 3);
-            if (x == 1)
+            if (x != 1)
             {
-                node1.parent = node2;
-                node2.values.AddRange(node1.values);
-                node2.values.Add(node1);
-                foreach(Set<T> set in list)
-                    if (set.root == node1)
-                    {
-                        list.Remove(set);
-                        break;
-                    }
+                Node<T> temp = node1;
+                node1 = node2;
+                node2 = temp;
             }
-            else
-            {
-                node2.parent = node1;
-                node1.values.AddRange(node2.values);
-                node1.values.Add(node2);
-                foreach (Set<T> set in list)
-                    if (set.root == node2)
-                    {
-                        list.Remove(set);
-                        break;
-                    }
-            }
+            node1.parent = node2;
+            node2.values.AddRange(node1.values);
+            node2.values.Add(node1);
+            foreach (Set<T> set in list)
+                if (set.root == node1)
+                {
+                    list.Remove(set);
+                    break;
+                }
+           
             cntOfSets--;
         }
     }
