@@ -60,6 +60,7 @@ namespace Disjoint_Set_Union
             {
                 node1.parent = node2;
                 node2.values.AddRange(node1.values);
+                node2.values.Add(node1);
                 foreach(Set<T> set in list)
                     if (set.root == node1)
                     {
@@ -71,6 +72,7 @@ namespace Disjoint_Set_Union
             {
                 node2.parent = node1;
                 node1.values.AddRange(node2.values);
+                node1.values.Add(node2);
                 foreach (Set<T> set in list)
                     if (set.root == node2)
                     {
