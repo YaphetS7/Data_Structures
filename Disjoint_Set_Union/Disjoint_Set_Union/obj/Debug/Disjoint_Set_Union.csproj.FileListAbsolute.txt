@@ -1,0 +1,7 @@
+C:\Users\Даниил\source\repos\Disjoint_Set_Union\Disjoint_Set_Union\bin\Debug\Disjoint_Set_Union.exe.config
+C:\Users\Даниил\source\repos\Disjoint_Set_Union\Disjoint_Set_Union\bin\Debug\Disjoint_Set_Union.exe
+C:\Users\Даниил\source\repos\Disjoint_Set_Union\Disjoint_Set_Union\bin\Debug\Disjoint_Set_Union.pdb
+C:\Users\Даниил\source\repos\Disjoint_Set_Union\Disjoint_Set_Union\obj\Debug\Disjoint_Set_Union.csprojAssemblyReference.cache
+C:\Users\Даниил\source\repos\Disjoint_Set_Union\Disjoint_Set_Union\obj\Debug\Disjoint_Set_Union.csproj.CoreCompileInputs.cache
+C:\Users\Даниил\source\repos\Disjoint_Set_Union\Disjoint_Set_Union\obj\Debug\Disjoint_Set_Union.exe
+C:\Users\Даниил\source\repos\Disjoint_Set_Union\Disjoint_Set_Union\obj\Debug\Disjoint_Set_Union.pdb
