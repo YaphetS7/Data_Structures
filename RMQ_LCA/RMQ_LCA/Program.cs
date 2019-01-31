@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace RMQ_LCA
 {
     public delegate int Func(int v1, int v2);
-    class Program
+    public class Program
     {
         public static int FindSum(int val1,int val2)
         {
@@ -20,13 +20,20 @@ namespace RMQ_LCA
             else
                 return val2;
         }
+        public static int FindMax(int val1, int val2)
+        {
+            if (val1 < val2)
+                return val2;
+            else
+                return val1;
+        }
         static void Main(string[] args)
         {
             int[] a = { 1, 3, 2, -1, 4};
             Func func = FindMin;
-            RMQ lol = new RMQ(a, func, true);
-            //lol.Print();
-            Console.WriteLine(lol.Q(0, 1, a.Length - 3)); //2
+           
+            RMQ rmq = new RMQ(a, func, true);
+            Console.WriteLine(rmq.Q(0, 1, a.Length - 3)); //2
         }
     }
     public class Node
@@ -94,11 +101,18 @@ namespace RMQ_LCA
         }
         public int Q(int i, int l, int r)
         {
+            int temp = 0;
+            if (function == Program.FindMin)
+                temp = int.MaxValue;
+            if (function == Program.FindMax)
+                temp = int.MinValue;
+            if (function == Program.FindSum)
+                temp = 0;
             int il = nodes[i].l;
             int ir = nodes[i].r;
             int mid = (il + ir) / 2;
             if (l > r)
-                return int.MaxValue;
+                return temp;
          
             if (l == il && r == ir)
                 return nodes[i].value;
