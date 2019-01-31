@@ -1,0 +1,7 @@
+C:\Users\Даниил\source\repos\RMQ_LCA\RMQ_LCA\bin\Debug\RMQ_LCA.exe.config
+C:\Users\Даниил\source\repos\RMQ_LCA\RMQ_LCA\bin\Debug\RMQ_LCA.exe
+C:\Users\Даниил\source\repos\RMQ_LCA\RMQ_LCA\bin\Debug\RMQ_LCA.pdb
+C:\Users\Даниил\source\repos\RMQ_LCA\RMQ_LCA\obj\Debug\RMQ_LCA.csprojAssemblyReference.cache
+C:\Users\Даниил\source\repos\RMQ_LCA\RMQ_LCA\obj\Debug\RMQ_LCA.csproj.CoreCompileInputs.cache
+C:\Users\Даниил\source\repos\RMQ_LCA\RMQ_LCA\obj\Debug\RMQ_LCA.exe
+C:\Users\Даниил\source\repos\RMQ_LCA\RMQ_LCA\obj\Debug\RMQ_LCA.pdb
