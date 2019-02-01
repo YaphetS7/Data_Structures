@@ -1,0 +1,7 @@
+C:\Users\Даниил\source\repos\Interval_Tree\Interval_Tree\bin\Debug\Interval_Tree.exe.config
+C:\Users\Даниил\source\repos\Interval_Tree\Interval_Tree\bin\Debug\Interval_Tree.exe
+C:\Users\Даниил\source\repos\Interval_Tree\Interval_Tree\bin\Debug\Interval_Tree.pdb
+C:\Users\Даниил\source\repos\Interval_Tree\Interval_Tree\obj\Debug\Interval_Tree.csprojAssemblyReference.cache
+C:\Users\Даниил\source\repos\Interval_Tree\Interval_Tree\obj\Debug\Interval_Tree.csproj.CoreCompileInputs.cache
+C:\Users\Даниил\source\repos\Interval_Tree\Interval_Tree\obj\Debug\Interval_Tree.exe
+C:\Users\Даниил\source\repos\Interval_Tree\Interval_Tree\obj\Debug\Interval_Tree.pdb
