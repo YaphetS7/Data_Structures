@@ -24,8 +24,8 @@ namespace Interval_Tree
         public IntervalNode(List<Interval> intervals)
         {
           
-            leftIntervals = IntervalTree.SortByLeft(intervals);
-            rightIntervals = IntervalTree.SortByRight(intervals);
+            leftIntervals = IntervalTree.SortByLeft(intervals, true);
+            rightIntervals = IntervalTree.SortByLeft(intervals, false);
             min = leftIntervals[0].start;
             max = rightIntervals[rightIntervals.Count - 1].end;
         }
@@ -39,15 +39,15 @@ namespace Interval_Tree
         public List<Interval> intervals_r;
         public IntervalTree(List<Interval> list)
         {
-            intervals_l = SortByLeft(list);
-            intervals_r = SortByRight(list);
+            intervals_l = SortByLeft(list, true);
+            intervals_r = SortByLeft(list, false);
             min = intervals_l[0].start;
             max = intervals_r[intervals_r.Count - 1].end;
             Build(min, max, root);
         }
         public List<Interval> Q(int point, IntervalNode node)
         {
-            
+
             if (point < node.leftIntervals[0].start)
                 return Q(point, node.left);
             if (point > node.rightIntervals[node.rightIntervals.Count - 1].end)
@@ -74,7 +74,7 @@ namespace Interval_Tree
                 return null;
             int mid = (l + r) / 2, i;
             List<Interval> list = new List<Interval>();
-            
+
             for (i = 0; i < intervals_l.Count; i++)
             {
                 if (mid < intervals_l[i].start)
@@ -89,14 +89,14 @@ namespace Interval_Tree
 
             node.left = Build(l, mid - 1, node.left);
             node.right = Build(mid + 1, r, node.right);
-            
+
             return node;
         }
         private bool Contains(int point, Interval interval)
         {
             return (interval.start <= point && point <= interval.end);
         }
-        public static List<Interval> SortByLeft(List<Interval> list)
+        public static List<Interval> SortByLeft(List<Interval> list, bool check)
         {
             int cnt = list.Count;
             List<Interval> interval = new List<Interval>();
@@ -108,38 +108,24 @@ namespace Interval_Tree
                 int min = int.MaxValue;
                 Interval temp = interval[0];
                 for (int i = 0; i < interval.Count; i++)
-                    if (interval[i].start < min)
+                {
+                    int a;
+                    if (check)
+                        a = interval[i].start;
+                    else
+                        a = interval[i].end;
+                    if (a < min)
                     {
                         temp = interval[i];
-                        min = interval[i].start;
+                        min = a;
                     }
+                }
                 result.Add(temp);
                 interval.Remove(temp);
             }
             return result;
         }
-        public static List<Interval> SortByRight(List<Interval> list)
-        {
-            int cnt = list.Count;
-            List<Interval> interval = new List<Interval>();
-            foreach (Interval i in list)
-                interval.Add(i);
-            List<Interval> result = new List<Interval>();
-            while (result.Count < cnt)
-            {
-                int min = int.MaxValue;////////////////////////////////////////////////
-                Interval temp = interval[0];
-                for (int i = 0; i < interval.Count; i++)
-                    if (interval[i].end < min)
-                    {
-                        temp = interval[i];
-                        min = interval[i].start;
-                    }
-                result.Add(temp);
-                interval.Remove(temp);
-            }
-            return result;
-        }
+    
     }
     class Program
     {
