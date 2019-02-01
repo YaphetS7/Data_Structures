@@ -153,7 +153,7 @@ namespace Interval_Tree
             list.Add(interval2);
             list.Add(interval3);
             IntervalTree tree = new IntervalTree(list);
-            List<Interval> ans = tree.Q(8, tree.root);
+            List<Interval> ans = tree.Q(6, tree.root);
 
             for (int i = 0; i < ans.Count; i++)
             {

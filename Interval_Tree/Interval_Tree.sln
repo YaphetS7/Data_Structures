@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interval_Tree", "Interval_Tree\Interval_Tree.csproj", "{535A2BD0-6122-4F3F-BE5E-C8DA2E5707FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsForTree", "TestsForTree\TestsForTree.csproj", "{CF39D73D-BF8D-4488-BA45-A510D5E51D1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{535A2BD0-6122-4F3F-BE5E-C8DA2E5707FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{535A2BD0-6122-4F3F-BE5E-C8DA2E5707FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{535A2BD0-6122-4F3F-BE5E-C8DA2E5707FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF39D73D-BF8D-4488-BA45-A510D5E51D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF39D73D-BF8D-4488-BA45-A510D5E51D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF39D73D-BF8D-4488-BA45-A510D5E51D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF39D73D-BF8D-4488-BA45-A510D5E51D1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
