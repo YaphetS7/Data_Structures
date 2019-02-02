@@ -1,0 +1,7 @@
+C:\Users\Даниил\source\repos\2D_Range_Tree\2D_Range_Tree\bin\Debug\2D_Range_Tree.exe.config
+C:\Users\Даниил\source\repos\2D_Range_Tree\2D_Range_Tree\bin\Debug\2D_Range_Tree.exe
+C:\Users\Даниил\source\repos\2D_Range_Tree\2D_Range_Tree\bin\Debug\2D_Range_Tree.pdb
+C:\Users\Даниил\source\repos\2D_Range_Tree\2D_Range_Tree\obj\Debug\2D_Range_Tree.csprojAssemblyReference.cache
+C:\Users\Даниил\source\repos\2D_Range_Tree\2D_Range_Tree\obj\Debug\2D_Range_Tree.csproj.CoreCompileInputs.cache
+C:\Users\Даниил\source\repos\2D_Range_Tree\2D_Range_Tree\obj\Debug\2D_Range_Tree.exe
+C:\Users\Даниил\source\repos\2D_Range_Tree\2D_Range_Tree\obj\Debug\2D_Range_Tree.pdb
