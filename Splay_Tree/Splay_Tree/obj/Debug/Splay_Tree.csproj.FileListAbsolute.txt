@@ -1,0 +1,7 @@
+C:\Users\Даниил\source\repos\Splay_Tree\Splay_Tree\bin\Debug\Splay_Tree.exe.config
+C:\Users\Даниил\source\repos\Splay_Tree\Splay_Tree\bin\Debug\Splay_Tree.exe
+C:\Users\Даниил\source\repos\Splay_Tree\Splay_Tree\bin\Debug\Splay_Tree.pdb
+C:\Users\Даниил\source\repos\Splay_Tree\Splay_Tree\obj\Debug\Splay_Tree.csprojAssemblyReference.cache
+C:\Users\Даниил\source\repos\Splay_Tree\Splay_Tree\obj\Debug\Splay_Tree.csproj.CoreCompileInputs.cache
+C:\Users\Даниил\source\repos\Splay_Tree\Splay_Tree\obj\Debug\Splay_Tree.exe
+C:\Users\Даниил\source\repos\Splay_Tree\Splay_Tree\obj\Debug\Splay_Tree.pdb
