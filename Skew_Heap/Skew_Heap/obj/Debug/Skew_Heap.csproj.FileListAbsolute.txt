@@ -1,0 +1,7 @@
+C:\Users\Даниил\source\repos\Skew_Heap\Skew_Heap\bin\Debug\Skew_Heap.exe.config
+C:\Users\Даниил\source\repos\Skew_Heap\Skew_Heap\bin\Debug\Skew_Heap.exe
+C:\Users\Даниил\source\repos\Skew_Heap\Skew_Heap\bin\Debug\Skew_Heap.pdb
+C:\Users\Даниил\source\repos\Skew_Heap\Skew_Heap\obj\Debug\Skew_Heap.csprojAssemblyReference.cache
+C:\Users\Даниил\source\repos\Skew_Heap\Skew_Heap\obj\Debug\Skew_Heap.csproj.CoreCompileInputs.cache
+C:\Users\Даниил\source\repos\Skew_Heap\Skew_Heap\obj\Debug\Skew_Heap.exe
+C:\Users\Даниил\source\repos\Skew_Heap\Skew_Heap\obj\Debug\Skew_Heap.pdb
