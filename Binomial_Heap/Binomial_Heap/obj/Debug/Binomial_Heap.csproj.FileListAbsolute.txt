@@ -1,0 +1,7 @@
+C:\Users\Даниил\source\repos\Binomial_Heap\Binomial_Heap\bin\Debug\Binomial_Heap.exe.config
+C:\Users\Даниил\source\repos\Binomial_Heap\Binomial_Heap\bin\Debug\Binomial_Heap.exe
+C:\Users\Даниил\source\repos\Binomial_Heap\Binomial_Heap\bin\Debug\Binomial_Heap.pdb
+C:\Users\Даниил\source\repos\Binomial_Heap\Binomial_Heap\obj\Debug\Binomial_Heap.csprojAssemblyReference.cache
+C:\Users\Даниил\source\repos\Binomial_Heap\Binomial_Heap\obj\Debug\Binomial_Heap.csproj.CoreCompileInputs.cache
+C:\Users\Даниил\source\repos\Binomial_Heap\Binomial_Heap\obj\Debug\Binomial_Heap.exe
+C:\Users\Даниил\source\repos\Binomial_Heap\Binomial_Heap\obj\Debug\Binomial_Heap.pdb
